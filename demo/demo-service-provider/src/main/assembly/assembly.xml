@@ -1,0 +1,21 @@
+<assembly>
+    <formats>
+        <format>tar.gz</format> <!--打包文件结构-->
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <directory>src/main/assembly/bin</directory>  <!-- 项目文件目录-->
+            <outputDirectory>bin</outputDirectory> <!--生成bin目录-->
+            <directoryMode>0755</directoryMode> <!--目录执行权限-->
+            <fileMode>0755</fileMode><!--文件执行权限-->
+        </fileSet>
+    </fileSets>
+    <dependencySets>
+        <dependencySet>
+            <useProjectArtifact>true</useProjectArtifact>
+            <outputDirectory>lib</outputDirectory><!-- 依赖jar包放置目录-->
+            <scope>runtime</scope>
+        </dependencySet>
+    </dependencySets>
+</assembly>
